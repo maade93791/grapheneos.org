@@ -73,3 +73,20 @@ for server in ${servers[@]}; do
     echo qualcomm.psds.grapheneos.org via $server
     sha256 https://qualcomm.psds.grapheneos.org/xtra3Mgrbeji.bin $server
 done
+
+echo
+echo Mediatek
+
+echo
+echo agnss.goog
+sha256 https://agnss.goog/pad/mtk/prod/1/LTEPO.DAT
+sha256 https://agnss.goog/pad/mtk/prod/1/NAV.DAT
+sha256 https://agnss.goog/pad/mtk/prod/1/STEPO.DAT
+
+for server in ${servers[@]}; do
+    echo
+    echo mediatek.psds.grapheneos.org via $server
+    sha256 https://mediatek.psds.grapheneos.org/pad/mtk/prod/1/LTEPO.DAT $server
+    sha256 https://mediatek.psds.grapheneos.org/pad/mtk/prod/1/NAV.DAT $server
+    sha256 https://mediatek.psds.grapheneos.org/pad/mtk/prod/1/STEPO.DAT $server
+done
